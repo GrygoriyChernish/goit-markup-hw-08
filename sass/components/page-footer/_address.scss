@@ -1,0 +1,21 @@
+.address {
+
+  font-size: 14px;
+  line-height: 1.71;
+  font-style: normal;
+  color: $whiteTextColor;
+}
+
+.address__whiteAccent {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.address__greyAccent {
+  display: block;
+  color: $footerAccent;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}

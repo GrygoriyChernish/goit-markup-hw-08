@@ -1,0 +1,34 @@
+.regularCustomersList {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+  @extend %list;
+
+  margin: -15px;
+}
+
+.regularCustomersList__item {
+  flex-basis: calc((100% - 2 * 30px) / 2);
+  height: 90px;
+  margin: 15px;
+}
+
+.regularCustomersList__link {
+  @extend %link;
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include centeredFlex();
+  @extend %link;
+
+  fill: $iconAndBorderColor;
+  border: 1px solid $iconAndBorderColor;
+  border-radius: 4px;
+  transition: border 250ms $cubic, fill 250ms $cubic;
+
+  &:hover,
+  &:focus {
+    border-color: $accentColor;
+    fill: $accentColor;
+  }
+}

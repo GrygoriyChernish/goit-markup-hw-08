@@ -1,0 +1,12 @@
+body {
+  font-family: $primary-font;
+  color: $primaryTextColor;
+  letter-spacing: 0.03em;
+  background-color: $primaryBackgroundColor;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

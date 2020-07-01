@@ -1,0 +1,39 @@
+.authNav {
+  // display: flex;
+  // margin-left: auto;
+  @extend %list;
+}
+
+.authNav__item {
+  // display: inline-flex;
+  // align-items: center;
+
+  &:not(:last-child) {
+    // margin-right: 30px;
+  }
+}
+
+.authNav__link {
+  // display: inline-flex;
+  // align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: $secondaryTextColor;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color 250ms $cubic;
+  @extend %link;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+.authNav__icon {
+  // margin-right: 10px;
+  fill: currentColor;
+}
