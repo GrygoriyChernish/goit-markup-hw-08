@@ -4,29 +4,27 @@
 
 }
 
-.menu {
-  display: none;
 
-  @media screen and (min-width: $tablet) {
-    display: block;
-  }
-}
 
 .mainNav__list {
   @extend %list;
 
   @media screen and (min-width: $tablet) {
     display: flex;
+    // margin-right: 84px;
   }
 
-  // margin-left: 86px;
+
 }
 
 .mainNav__item {
   position: relative;
 
   &:not(:last-child) {
-    // margin-right: 50px;
+    @media screen and (min-width: $tablet) {
+      margin-right: 50px;
+    }
+
   }
 }
 

@@ -1,0 +1,26 @@
+.menuButton {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
+}
+
+
+.menuButton__iconCross {
+  display: none;
+
+  .menuButton.is-open & {
+    display: block;
+  }
+
+}
+
+.menuButton.is-open .menuButton__iconMenu {
+  display: none;
+}
