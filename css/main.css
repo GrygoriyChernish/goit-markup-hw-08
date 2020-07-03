@@ -151,32 +151,6 @@ img {
   color: #2196f3;
 }
 
-.menuButton {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background-color: transparent;
-}
-
-.menuButton:hover, .menuButton:focus {
-  fill: #2196f3;
-}
-
-.menuButton__iconCross {
-  display: none;
-}
-
-.menuButton.is-open .menuButton__iconCross {
-  display: block;
-}
-
-.menuButton.is-open .menuButton__iconMenu {
-  display: none;
-}
-
 @media screen and (min-width: 768px) {
   .mainNav__list {
     display: -webkit-box;
