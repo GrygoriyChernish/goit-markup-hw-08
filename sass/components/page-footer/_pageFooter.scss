@@ -5,7 +5,6 @@
 .pageFooter__container {
   display: flex;
   flex-direction: column;
-  // align-items: center;
 
   padding-left: 15px;
   padding-right: 15px;
@@ -14,24 +13,21 @@
   margin-left: auto;
   margin-right: auto;
 
-  // padding-top: 48px;
-  // padding-bottom: 28px;
-  // margin-left: auto;
-  // margin-right: auto;
-
   @media screen and (min-width: $tablet) {
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: row;
   }
 
-  // justify-content: space-between;
-  // align-items: baseline;
-  // width: 1200px;
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+    align-items: baseline;
+    justify-content: space-between;
+  }
 }
 
 .pageFooter__element {
-  text-align: center;
+
 
   @media screen and (max-width: 767px) {
     width: 100%;
@@ -40,6 +36,7 @@
   &:not(:last-child) {
     @media screen and (max-width: 1199px) {
       margin-bottom: 60px;
+      text-align: center;
     }
   }
 }
