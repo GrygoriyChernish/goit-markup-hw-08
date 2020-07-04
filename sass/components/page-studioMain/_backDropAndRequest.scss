@@ -1,17 +1,39 @@
+.backDrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms $cubic;
+  overflow-y: scroll;
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-top: 94px;
+    padding-right: 15px;
+    padding-bottom: 94px;
+    padding-left: 15px;
+  }
+}
+
 .request {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
   transition: transform 250ms $cubic;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  min-width: 528px;
-  min-height: 581px;
-
+  width: calc(100% - 30px);
+  min-height: 609px;
   padding-top: 40px;
   padding-right: 40px;
   padding-bottom: 40px;
@@ -22,17 +44,44 @@
   border-radius: 4px;
 
   .backDrop.backDrop--hidden & {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: scale(1.1);
+
+    @media screen and (min-width: $tablet) {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 450px;
+    min-height: 609px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    top: 50%;
+    min-width: 528px;
+    min-height: 581px;
   }
 }
-
-
 
 .request__title {
   margin-bottom: 30px;
 
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.15;
+  }
 }
 
 .request__field {
@@ -59,22 +108,21 @@
   top: 50%;
   left: 45px;
   transform: translateY(-50%);
-  transition: transform 250ms $cubic, color 250ms $cubic, font-size 250ms $cubic,
-    line-height 250ms $cubic;
+  transition: transform 250ms $cubic, color 250ms $cubic, font-size 250ms $cubic, line-height 250ms $cubic;
 
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: $secondaryTextColor;
 
-  .request__field:focus-within>&,
-  .request__input:not(:placeholder-shown)+& {
+  .request__field:focus-within > &,
+  .request__input:not(:placeholder-shown) + & {
     transform: translateY(-40px) translateX(-25px);
     font-size: 12px;
     line-height: 1.17;
   }
 
-  .request__field:focus-within>& {
+  .request__field:focus-within > & {
     color: $accentColor;
   }
 }
@@ -87,7 +135,7 @@
   fill: $primaryTextColor;
   transition: fill 250ms $cubic;
 
-  .request__field:focus-within>& {
+  .request__field:focus-within > & {
     fill: $accentColor;
   }
 }
@@ -104,7 +152,6 @@
   resize: none;
 }
 
-
 .request__textareaField {
   position: relative;
   display: flex;
@@ -120,17 +167,16 @@
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: $secondaryTextColor;
-  transition: transform 250ms $cubic, color 250ms $cubic, font-size 250ms $cubic,
-    line-height 250ms $cubic;
+  transition: transform 250ms $cubic, color 250ms $cubic, font-size 250ms $cubic, line-height 250ms $cubic;
 
-  .request__textareaField:focus-within>&,
-  .request__textarea:not(:placeholder-shown)+& {
+  .request__textareaField:focus-within > &,
+  .request__textarea:not(:placeholder-shown) + & {
     transform: translateY(-30px) translateX(5px);
     font-size: 12px;
     line-height: 1.17;
   }
 
-  .request__textareaField:focus-within>& {
+  .request__textareaField:focus-within > & {
     color: $accentColor;
   }
 }
@@ -151,7 +197,7 @@
   border: 2px solid #212121;
   border-radius: 2px;
 
-  .request__checkboxInput:checked+& {
+  .request__checkboxInput:checked + & {
     border-color: $accentColor;
     background-image: url(../images/icon-check.svg);
     background-color: $accentColor;
@@ -162,15 +208,25 @@
 
 .request__checkboxLabel {
   margin-right: 5px;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 11px;
+  line-height: 1.17;
   color: $secondaryTextColor;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .request__checkboxLink {
   color: $accentColor;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 11px;
+  line-height: 1.17;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 /* Оформления кнопки закрытия модального окна */

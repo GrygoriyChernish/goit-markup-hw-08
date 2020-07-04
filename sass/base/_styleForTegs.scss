@@ -3,6 +3,10 @@ body {
   color: $primaryTextColor;
   letter-spacing: 0.03em;
   background-color: $primaryBackgroundColor;
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 img {
