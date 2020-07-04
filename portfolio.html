@@ -19,41 +19,52 @@
     <header class="pageHeader pageHeader--portfolioBorder">
       <!-- Навигация -->
       <div class="pageHeader__row container">
-        <nav class="mainNav">
-          <a href="./index.html" class="logo link">
-            <span class="logo__accent">Web</span>
-            Studio
-          </a>
-          <ul class="mainNav__list list">
-            <li class="mainNav__item">
-              <a href="./index.html" class="mainNav__link link">Студия</a>
+        <a href="./index.html" class="logo"> <span class="logo__accent">Web</span>&nbsp;Studio</a>
+        <button
+          type="button"
+          class="menuButton"
+          aria-expanded="false"
+          aria-controls="pageHeader__menu"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use href="./images/sprite.svg#menu" class="menuButton__iconMenu"></use>
+            <use href="./images/sprite.svg#cross" class="menuButton__iconCross"></use>
+          </svg>
+        </button>
+        <div class="pageHeader__menu" id="pageHeader__menu" data-menu>
+          <nav class="mainNav">
+            <ul class="mainNav__list">
+              <li class="mainNav__item">
+                <a href="./index.html" class="mainNav__link">Студия</a>
+              </li>
+              <li class="mainNav__item">
+                <a href="./portfolio.html" class="mainNav__link mainNav__link--current">Портфолио</a>
+              </li>
+              <li class="mainNav__item">
+                <a href="" class="mainNav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="authNav">
+            <li class="authNav__item">
+              <a href="mailto:info@devstudio.com" class="authNav__link">
+                <svg class="authNav__icon" width="16" height="11">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="mainNav__item">
-              <a href="./portfolio.html" class="mainNav__link mainNav__link--current link">Портфолио</a>
-            </li>
-            <li class="mainNav__item">
-              <a href="" class="mainNav__link link">Контакты</a>
+            <li class="authNav__item">
+              <a href="tel:+380961111111" class="authNav__link">
+                <svg class="authNav__icon" width="10" height="15">
+                  <use href="./images/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="authNav list">
-          <li class="authNav__item">
-            <a href="mailto:info@devstudio.com" class="authNav__link link">
-              <svg class="authNav__icon" width="16" height="11">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="authNav__item">
-            <a href="tel:+380961111111" class="authNav__link link">
-              <svg class="authNav__icon" width="10" height="15">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -300,7 +311,7 @@
     </main>
     <footer class="pageFooter">
       <div class="pageFooter__container">
-        <div>
+        <div class="pageFooter__element">
           <a href="./index.html" class="logo logo--inverce">
             <span class="logo__accent">Web</span>
             Studio
@@ -313,7 +324,7 @@
             <span class="address__greyAccent">+38 099 111 11 11</span>
           </address>
         </div>
-        <div>
+        <div class="pageFooter__element">
           <b class="socialNetwork__title">Присоединяйтесь</b>
           <ul class="socialNetwork">
             <li class="socialNetwork__item">
@@ -346,9 +357,9 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="pageFooter__element">
           <form class="subscription">
-            <label>
+            <label class="subscription__label">
               <span class="subscription__title">Подпишитесь на рассылку</span>
               <input type="email" name="email" class="subscription__input" placeholder="E-mail" required />
             </label>
@@ -362,5 +373,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
