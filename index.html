@@ -137,31 +137,40 @@
           <ul class="worksList">
             <li class="worksList__item">
               <img
+                srcset="
+                  ./images/studio-images/what-are-we-doing/desktop-app.jpg    370w,
+                  ./images/studio-images/what-are-we-doing/desktop-app@2x.jpg 740w
+                "
                 src="./images/studio-images/what-are-we-doing/desktop-app.jpg"
                 alt="Ноутбук с открытым приложением"
                 class="worksList__image"
-                width="370"
-                height="294"
+                sizes="30vw"
               />
               <h3 class="worksList__title">Десктопные приложения</h3>
             </li>
             <li class="worksList__item">
               <img
+                srcset="
+                  ./images/studio-images/what-are-we-doing/mobile-app.jpg    370w,
+                  ./images/studio-images/what-are-we-doing/mobile-app@2x.jpg 740w
+                "
                 src="./images/studio-images/what-are-we-doing/mobile-app.jpg"
                 alt="Мобильный телефон"
                 class="worksList__image"
-                width="370"
-                height="294"
+                sizes="30vw"
               />
               <h3 class="worksList__title">Мобильные приложения</h3>
             </li>
             <li class="worksList__item">
               <img
+                srcset="
+                  ./images/studio-images/what-are-we-doing/design-decisions.jpg    370w,
+                  ./images/studio-images/what-are-we-doing/design-decisions@2x.jpg 740w
+                "
                 src="./images/studio-images/what-are-we-doing/design-decisions.jpg"
                 alt="Монитор компьютера с красивым дизайном"
                 class="worksList__image"
-                width="370"
-                height="294"
+                sizes="30vw"
               />
               <h3 class="worksList__title">Дизайнерские решения</h3>
             </li>
@@ -174,13 +183,34 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="ourTeam">
             <li class="ourTeam__item">
-              <img
-                src="./images/studio-images/our-team/John-Smith.jpg"
-                alt="Фото Николай Кучеренко"
-                class="ourTeam__image"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/studio-images/our-team/kycherenko/kycherenkoMobile.jpg    450w,
+                    ./images/studio-images/our-team/kycherenko/kycherenkoMobile@2x.jpg 900w
+                  "
+                  media="(max-width: 576px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio-images/our-team/kycherenko/kycherenkoTablet.jpg    354w,
+                    ./images/studio-images/our-team/kycherenko/kycherenkoTablet@2x.jpg 708w
+                  "
+                  media="(min-width: 577px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio-images/our-team/kycherenko/kycherenkoDesktop.jpg    270w,
+                    ./images/studio-images/our-team/kycherenko/kycherenkoDesktop@2x.jpg 540w
+                  "
+                  media="(min-width: 960px)"
+                />
+                <img
+                  src="./images/studio-images/our-team/kycherenko/kycherenkoTablet.jpg"
+                  alt="Фото Николай Кучеренко"
+                  class="ourTeam__image"
+                />
+              </picture>
               <div class="ourTeam__meta">
                 <h3 class="ourTeam__title">Николай Кучеренко</h3>
                 <p class="ourTeam__text">Product Designer</p>
@@ -217,13 +247,34 @@
               </div>
             </li>
             <li class="ourTeam__item">
-              <img
-                src="./images/studio-images/our-team/Marta-Stewart.jpg"
-                alt="Фото Ольга Иванова"
-                class="ourTeam__image"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/studio-images/our-team/ivanova/ivanovaMobile.jpg    450w,
+                    ./images/studio-images/our-team/ivanova/ivanovaMobile@2x.jpg 900w
+                  "
+                  media="(max-width: 576px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio-images/our-team/ivanova/ivanovaTablet.jpg    354w,
+                    ./images/studio-images/our-team/ivanova/ivanovaTablet@2x.jpg 708w
+                  "
+                  media="(min-width: 577px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio-images/our-team/ivanova/ivanovaDesktop.jpg    270w,
+                    ./images/studio-images/our-team/ivanova/ivanovaDesktop@2x.jpg 540w
+                  "
+                  media="(min-width: 960px)"
+                />
+                <img
+                  src="./images/studio-images/our-team/ivanova/ivanovaTablet.jpg"
+                  alt="Фото Ольга Иванова"
+                  class="ourTeam__image"
+                />
+              </picture>
               <div class="ourTeam__meta">
                 <h3 class="ourTeam__title">Ольга Иванова</h3>
                 <p class="ourTeam__text">Frontend Developer</p>
@@ -260,13 +311,34 @@
               </div>
             </li>
             <li class="ourTeam__item">
-              <img
-                src="./images/studio-images/our-team/Robert-Jakis.jpg"
-                alt="Фото Андрей Шевченко"
-                class="ourTeam__image"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/studio-images/our-team/shevchenko/shevchenkoMobile.jpg    450w,
+                    ./images/studio-images/our-team/shevchenko/shevchenkoMobile@2x.jpg 900w
+                  "
+                  media="(max-width: 576px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio-images/our-team/shevchenko/shevchenkoTablet.jpg    354w,
+                    ./images/studio-images/our-team/shevchenko/shevchenkoTablet@2x.jpg 708w
+                  "
+                  media="(min-width: 577px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio-images/our-team/shevchenko/shevchenkoDesktop.jpg    270w,
+                    ./images/studio-images/our-team/shevchenko/shevchenkoDesktop@2x.jpg 540w
+                  "
+                  media="(min-width: 960px)"
+                />
+                <img
+                  src="./images//studio-images//our-team/shevchenko/shevchenkoTablet.jpg"
+                  alt="Фото Андрей Шевченко"
+                  class="ourTeam__image"
+                />
+              </picture>
               <div class="ourTeam__meta">
                 <h3 class="ourTeam__title">Андрей Шевченко</h3>
                 <p class="ourTeam__text">Marketing</p>
@@ -303,13 +375,34 @@
               </div>
             </li>
             <li class="ourTeam__item">
-              <img
-                src="./images/studio-images/our-team/Martin-Doe.jpg"
-                alt="Фото Иван Николаев"
-                class="ourTeam__image"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/studio-images/our-team/nikolaev/nikolaevMobile.jpg    450w,
+                    ./images/studio-images/our-team/nikolaev/nikolaevMobile@2x.jpg 900w
+                  "
+                  media="(max-width: 576px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio-images/our-team/nikolaev/nikolaevTablet.jpg    354w,
+                    ./images/studio-images/our-team/nikolaev/nikolaevTablet@2x.jpg 708w
+                  "
+                  media="(min-width: 577px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio-images/our-team/nikolaev/nikolaevDesktop.jpg    270w,
+                    ./images/studio-images/our-team/nikolaev/nikolaevDesktop@2x.jpg 540w
+                  "
+                  media="(min-width: 960px)"
+                />
+                <img
+                  src="./images/studio-images/our-team/nikolaev/nikolaevTablet.jpg"
+                  alt="Фото Иван Николаев"
+                  class="ourTeam__image"
+                />
+              </picture>
               <div class="ourTeam__meta">
                 <h3 class="ourTeam__title">Иван Николаев</h3>
                 <p class="ourTeam__text">UI Designer</p>

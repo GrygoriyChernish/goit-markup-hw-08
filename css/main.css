@@ -418,6 +418,13 @@ img {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
+
 .button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -430,6 +437,7 @@ img {
           align-items: center;
   padding: 10px 32px;
   border-radius: 4px;
+  min-width: 200px;
   border: transparent;
   color: #fff;
   background-color: #2196f3;
@@ -1357,11 +1365,6 @@ img {
 
 .card {
   height: 100%;
-}
-
-.cardSet {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 @media screen and (min-width: 768px) {
