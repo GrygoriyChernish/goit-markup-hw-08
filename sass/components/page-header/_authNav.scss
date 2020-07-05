@@ -30,14 +30,13 @@
   @media screen and (min-width: $desktop) {
     display: inline-flex;
     align-items: center;
+
   }
 }
 
 .authNav__link {
   display: inline-flex;
   align-items: center;
-  // padding-top: 32px;
-  // padding-bottom: 32px;
 
   color: $secondaryTextColor;
   font-weight: 500;
@@ -50,6 +49,11 @@
   &:hover,
   &:focus {
     color: $accentColor;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
