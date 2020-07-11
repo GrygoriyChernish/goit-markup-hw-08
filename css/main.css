@@ -56,19 +56,19 @@ img {
 
 @media screen and (min-width: 480px) {
   .container {
-    min-width: 460px;
+    width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    min-width: 748px;
+    width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    min-width: 1180px;
+    width: 1200px;
   }
 }
 
@@ -850,6 +850,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .pageFooter__container {
+    width: 768px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
